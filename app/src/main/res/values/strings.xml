@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Tattoo</string>
+    <string name="phone_text">Phone</string>
 </resources>
