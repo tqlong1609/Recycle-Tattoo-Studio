@@ -20,11 +20,11 @@ public class SplashActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
         Handler handler = new Handler();
-        handler.postDelayed(() -> changeToRegisterActivity(), SECOND_DELAY);
+        handler.postDelayed(() -> changeToLoginActivity(), SECOND_DELAY);
     }
 
-    private void changeToRegisterActivity() {
-        startActivity(new Intent(SplashActivity.this, RegisterActivity.class));
+    private void changeToLoginActivity() {
+        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
         finish();
     }
 }
