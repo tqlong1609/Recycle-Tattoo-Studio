@@ -1,10 +1,11 @@
 package vn.ts5.tattoo.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 
 import vn.ts5.tattoo.R;
 
@@ -17,10 +18,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         Handler handler = new Handler();
-        handler.postDelayed(() -> run(),SECOND_DELAY);
+        handler.postDelayed(()-> changeToRegisterActivity(), SECOND_DELAY);
     }
 
-    private void run() {
+    private void changeToRegisterActivity() {
         startActivity(new Intent(SplashActivity.this,RegisterActivity.class));
         finish();
     }

@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
     <!-- typical size of views for register activity-->
     <dimen name="image_width">200dp</dimen>
     <dimen name="image_height">200dp</dimen>
     <dimen name="margin_top_image">100dp</dimen>
     <dimen name="margin_top_text">50dp</dimen>
     <dimen name="margin_left_text">50dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="action_bar_size">60dp</dimen>
+    <dimen name="icon_size_big">40dp</dimen>
+    <dimen name="icon_size">30dp</dimen>
+    <dimen name="icon_size_small">16dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="padding_small_1">4dp</dimen>
+    <dimen name="padding_small_2">2dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_big">32dp</dimen>
+
+    <!-- Text size -->
+    <dimen name="text_size_hint">12dip</dimen>
+    <dimen name="text_size_overall">16dip</dimen>
+    <dimen name="text_size_header">19dip</dimen>
+    <dimen name="text_size_title">22dip</dimen>
+    <dimen name="text_size_title_big">25dip</dimen>
+
+    <!-- splash screen -->
+    <dimen name="logo_with">200dp</dimen>
+    <dimen name="logo_height">200dp</dimen>
+
+    <!-- login screen -->
+    <dimen name="logo_icon_with">120dp</dimen>
+    <dimen name="logo_icon_height">120dp</dimen>
+
 
 </resources>
