@@ -44,5 +44,6 @@
     <dimen name="logo_icon_with">120dp</dimen>
     <dimen name="logo_icon_height">120dp</dimen>
 
+    <dimen name="ad">123dp</dimen>
 
 </resources>
