@@ -43,7 +43,11 @@
     <!-- login screen -->
     <dimen name="logo_icon_with">120dp</dimen>
     <dimen name="logo_icon_height">120dp</dimen>
+    <dimen name="text_height">40dp</dimen>
+    <dimen name="btn_width">150dp</dimen>
+    <dimen name="btn_height">30dp</dimen>
+    <dimen name="radius_edit_login">5dp</dimen>
+    <dimen name="radius_btn_login">3dp</dimen>
 
-    <dimen name="ad">123dp</dimen>
 
 </resources>
