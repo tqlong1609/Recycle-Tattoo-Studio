@@ -7,7 +7,7 @@ public class History {
     private String id;
     private String date;
     private String name;
-    private int status; //trang thai
+    private int status; //trang thai            // ?? int !string
     private int rate;   //danh gia
     private long price; //don gia
     private long deposit; // da coc

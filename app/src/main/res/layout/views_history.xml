@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ImageView
+        android:id="@+id/img_time"
+        android:layout_width="@dimen/image_width_header"
+        android:layout_height="@dimen/image_height_header"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#ff0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/img_margin_start"
+        android:layout_marginTop="@dimen/txt_margin_top"
+        android:text="16:00 28/05/2019"
+        app:layout_constraintStart_toEndOf="@+id/img_time"
+        app:layout_constraintTop_toTopOf="@+id/img_time" />
+
+    <ImageView
+        android:id="@+id/img_name"
+        android:background="#ff00"
+        android:layout_width="@dimen/image_width_header"
+        android:layout_height="@dimen/image_height_header"
+        android:layout_marginTop="@dimen/img_margin_top"
+        app:layout_constraintStart_toStartOf="@+id/img_time"
+        app:layout_constraintTop_toBottomOf="@+id/img_time" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/img_margin_start"
+        android:layout_marginTop="@dimen/txt_margin_top"
+        android:text="Mai Trung Thuỷ"
+        app:layout_constraintStart_toEndOf="@+id/img_name"
+        app:layout_constraintTop_toTopOf="@+id/img_name" />
+
+    <ImageView
+        android:id="@+id/img_price"
+        android:layout_width="@dimen/image_width_header"
+        android:layout_height="@dimen/image_height_header"
+        android:layout_marginTop="@dimen/img_margin_top"
+        android:background="#002AFF"
+        app:layout_constraintStart_toStartOf="@+id/img_name"
+        app:layout_constraintTop_toBottomOf="@+id/img_name" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/img_margin_start"
+        android:layout_marginTop="@dimen/txt_margin_top"
+        android:text="Đơn giá: 5.000.000đ"
+        app:layout_constraintStart_toEndOf="@+id/img_price"
+        app:layout_constraintTop_toTopOf="@+id/img_price" />
+
+    <ImageView
+        android:id="@+id/img_deposit"
+        android:layout_width="@dimen/image_width_header"
+        android:layout_height="@dimen/image_height_header"
+        android:layout_marginTop="@dimen/img_margin_top"
+        android:background="#673AB7"
+        app:layout_constraintStart_toStartOf="@+id/img_price"
+        app:layout_constraintTop_toBottomOf="@+id/img_price" />
+
+    <TextView
+        android:id="@+id/txt_deposit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txt_margin_top"
+        android:layout_marginStart="@dimen/img_margin_start"
+        android:text="Đã cọc: 1.000.000đ"
+        app:layout_constraintStart_toEndOf="@+id/img_deposit"
+        app:layout_constraintTop_toTopOf="@+id/img_deposit" />
+
+    <ImageView
+        android:id="@+id/img_payment"
+        android:layout_width="@dimen/image_width_header"
+        android:layout_height="@dimen/image_height_header"
+        android:layout_marginTop="@dimen/img_margin_top"
+        android:background="#FF9800"
+        app:layout_constraintStart_toStartOf="@+id/img_deposit"
+        app:layout_constraintTop_toBottomOf="@+id/img_deposit" />
+
+    <TextView
+        android:id="@+id/txt_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txt_margin_top"
+        android:layout_marginStart="@dimen/img_margin_start"
+        android:text="Đã thanh toán: 1.000.000đ"
+        app:layout_constraintStart_toEndOf="@+id/img_payment"
+        app:layout_constraintTop_toTopOf="@+id/img_payment" />
+</androidx.constraintlayout.widget.ConstraintLayout>
