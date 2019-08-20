@@ -50,6 +50,10 @@
     <dimen name="radius_btn_login">3dp</dimen>
 
     <!--header information-->
-    <dimen name="image_width_header">20dp</dimen>
-    <dimen name="image_height_header">20dp</dimen>
+    <dimen name="image_width_header">30dp</dimen>
+    <dimen name="image_height_header">30dp</dimen>
+
+    <!--Activity main-->
+    <dimen name="btn_margin_left">30dp</dimen>
+    <dimen name="btn_width_activity_main">350dp</dimen>
 </resources>

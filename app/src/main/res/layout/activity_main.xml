@@ -12,5 +12,18 @@
         android:layout_weight="1"
         layout="@layout/header_information"/>
 
+    <Button
+        style="@style/BtnCreateNew"
+        android:paddingEnd="100dp"
+        android:paddingLeft="110dp"
+        android:drawableLeft="@drawable/ic_plus"
+        android:textAllCaps="false"
+        android:text="Tạo mới"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_login_selector"
+        android:layout_marginLeft="@dimen/btn_margin_left"
+        android:layout_width="@dimen/btn_width_activity_main"
+        android:layout_height="50dp" />
+
 
 </LinearLayout>
