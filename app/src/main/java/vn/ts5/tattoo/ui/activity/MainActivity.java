@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setupViews();
+        //setupViews();
     }
 
     private void setupViews() {
@@ -52,10 +52,14 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
         return null;
     }
 
-    // todo: progress event click edit recycle view
-    // position: index of item need to edit
-    @Override
-    public void onItemsClicked(int position) {
 
+    @Override
+    public void onItemsClicked(History history) {
+
+    }
+
+    @Override
+    public void onRemove(History history) {
+        // todo: dialog yes/no
     }
 }

@@ -100,4 +100,113 @@
         android:text="Đã thanh toán: 1.000.000đ"
         app:layout_constraintStart_toEndOf="@+id/img_payment"
         app:layout_constraintTop_toTopOf="@+id/img_payment" />
+
+    <ImageView
+        android:id="@+id/img_balance"
+        android:layout_width="@dimen/image_width_header"
+        android:layout_height="@dimen/image_height_header"
+        android:layout_marginTop="@dimen/img_margin_top"
+        android:background="#E91E63"
+        app:layout_constraintStart_toStartOf="@+id/img_payment"
+        app:layout_constraintTop_toBottomOf="@+id/img_payment" />
+
+    <TextView
+        android:id="@+id/txt_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txt_margin_top"
+        android:layout_marginStart="@dimen/img_margin_start"
+        android:text="Còn lại: 3.000.000đ"
+        app:layout_constraintStart_toEndOf="@+id/img_balance"
+        app:layout_constraintTop_toTopOf="@+id/img_balance" />
+
+    <TextView
+        android:id="@+id/txt_status"
+        style="@style/TxtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Chưa hoàn thành"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="@dimen/linear_layout_width"
+        android:layout_height="@dimen/linear_layout_height"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="@+id/txt_status"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_status"
+        app:layout_constraintTop_toBottomOf="@+id/txt_status">
+
+        <ImageView
+            android:id="@+id/img_star_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_star_yellow" />
+
+        <ImageView
+            android:id="@+id/img_star_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_star_yellow" />
+
+        <ImageView
+            android:id="@+id/img_star_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_star_yellow" />
+
+        <ImageView
+            android:id="@+id/img_star_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_star_white" />
+
+        <ImageView
+            android:id="@+id/img_star_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_star_white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_edit"
+        android:background="#8BC34A"
+        android:layout_width="@dimen/img_edit_width"
+        android:layout_height="@dimen/img_edit_height"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/img_remove"
+        android:layout_width="@dimen/img_edit_width"
+        android:layout_height="@dimen/img_edit_height"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="#8BC34A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toEndOf="@+id/img_edit"
+        app:layout_constraintTop_toTopOf="@+id/img_edit" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

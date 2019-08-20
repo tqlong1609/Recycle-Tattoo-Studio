@@ -27,7 +27,40 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     private OnCallBack mListener;
 
     public interface OnCallBack{
-        void onItemsClicked(int position);
+        void onItemsClicked(History history);
+        void onRemove(History history);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        TextView txtDate;
+        TextView txtName;
+        TextView txtPrice;
+        TextView txtDeposit;
+        TextView txtPayment;
+        TextView Balance;
+        TextView txtStatus;
+        ImageView imgRate;
+        Button btnEdit;
+        Button btnRemove;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            // mapping
+//            txtData = itemView.findViewById();
+//            txtName = itemView.findViewById();
+//            txtPrice = itemView.findViewById();
+//            txtName = itemView.findViewById();
+//            txtDeposit = itemView.findViewById();
+//            txtPayment = itemView.findViewById();
+//            Balance = itemView.findViewById();
+//            txtStatus = itemView.findViewById();
+//            imgRate = itemView.findViewById();
+//            btnEdit = itemView.findViewById();
+//            btnRemove = itemView.findViewById();
+
+        }
     }
 
     public HistoryAdapter(ArrayList<History> mListHistorys, OnCallBack mListener) {
@@ -46,14 +79,25 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     // todo: set values
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.txtData.setText(mListHistorys.get(position).getName());
-        holder.txtName.setText(mListHistorys.get(position).getName());
-        holder.txtPrice.setText(mListHistorys.get(position).getName());
-        holder.txtDeposit.setText(mListHistorys.get(position).getName());
-        holder.txtPayment.setText(mListHistorys.get(position).getName());
-        holder.Balance.setText(mListHistorys.get(position).getName());
-        holder.txtStatus.setText(mListHistorys.get(position).getName());
-        // ....
+        History history = mListHistorys.get(position);
+        if(history != null){
+
+            holder.txtDate.setText(history.getDate());
+            holder.txtName.setText(history.getName());
+            holder.txtPrice.setText(String.valueOf(history.getPrice()));
+            holder.txtDeposit.setText(String.valueOf(history.getDeposit()));
+            //holder.txtPayment.setText(history.getPayment());
+            holder.Balance.setText(mListHistorys.get(position).getName());
+            holder.txtStatus.setText(mListHistorys.get(position).getName());
+
+            holder.btnRemove.setOnClickListener((v) -> mListener.onRemove(history));
+            holder.btnEdit.setOnClickListener((v) -> mListener.onItemsClicked(history));
+        }
+
+    }
+
+    private void clickButtonRemove() {
+
     }
 
     @Override
@@ -62,52 +106,5 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     }
 
     // todo: mapping view
-    public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtData;
-        TextView txtName;
-        TextView txtPrice;
-        TextView txtDeposit;
-        TextView txtPayment;
-        TextView Balance;
-        TextView txtStatus;
-        ImageView imgRate;
-        Button btnEdit;
-        Button btnRemove;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            // mapping
-            txtData = itemView.findViewById();
-            txtName = itemView.findViewById();
-            txtPrice = itemView.findViewById();
-            txtName = itemView.findViewById();
-            txtDeposit = itemView.findViewById();
-            txtPayment = itemView.findViewById();
-            Balance = itemView.findViewById();
-            txtStatus = itemView.findViewById();
-            imgRate = itemView.findViewById();
-            btnEdit = itemView.findViewById();
-            btnRemove = itemView.findViewById();
-
-            // event
-            btnEdit.setOnClickListener((v) -> ClickButtonEdit());
-            btnRemove.setOnClickListener((v) -> ClickButtonRemove());
-        }
-
-        private void ClickButtonRemove() {
-            RemoveItemHistory(getAdapterPosition());
-        }
-
-        // position: index click recycle view
-        private void RemoveItemHistory(int position) {
-            mListHistorys.remove(position);
-            notifyItemRemoved(position);
-        }
-
-        private void ClickButtonEdit() {
-            mListener.onItemsClicked(getAdapterPosition());
-        }
-    }
 }
