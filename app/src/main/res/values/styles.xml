@@ -37,4 +37,9 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:fontFamily">monospace</item>
     </style>
+    
+    <!--Header information theme-->
+    <style name="TextHeader">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
 </resources>

@@ -49,5 +49,7 @@
     <dimen name="radius_edit_login">5dp</dimen>
     <dimen name="radius_btn_login">3dp</dimen>
 
-
+    <!--header information-->
+    <dimen name="image_width_header">20dp</dimen>
+    <dimen name="image_height_header">20dp</dimen>
 </resources>
