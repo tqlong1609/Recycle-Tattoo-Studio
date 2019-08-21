@@ -83,4 +83,8 @@
     <dimen name="btn_confirm_height">40dp</dimen>
     <dimen name="stroke_add_width">1dp</dimen>
 
+    <!--Rating Activity-->
+    <dimen name="edit_width_comment">370dp</dimen>
+    <dimen name="edit_height_comment">174dp</dimen>
+
 </resources>
