@@ -3,7 +3,10 @@ package vn.ts5.tattoo.ui.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.data.model.History;
@@ -18,8 +22,6 @@ import vn.ts5.tattoo.data.model.History;
 /**
  * Created by Nani on 2019-08-19.
  */
-// todo: mapping view
-// todo: set values
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
 
@@ -27,8 +29,9 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     private OnCallBack mListener;
 
     public interface OnCallBack{
-        void onItemsClicked(History history);
+        void onEdit(History history);
         void onRemove(History history);
+        String checkStatus(int status, TextView txtStatus);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -38,28 +41,46 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         TextView txtPrice;
         TextView txtDeposit;
         TextView txtPayment;
-        TextView Balance;
+        TextView txtBalance;
         TextView txtStatus;
-        ImageView imgRate;
-        Button btnEdit;
-        Button btnRemove;
+
+        int[] listIdImgStar
+                = {R.id.img_star_1, R.id.img_star_2, R.id.img_star_3, R.id.img_star_4, R.id.img_star_5};
+
+        List<ImageView> listImgStar;
+
+        ImageButton btnEdit;
+        ImageButton btnRemove;
+
+        public int getCountStar()
+        {
+            return listIdImgStar.length;
+        }
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            listImgStar = new ArrayList<>();
 
-            // mapping
-//            txtData = itemView.findViewById();
-//            txtName = itemView.findViewById();
-//            txtPrice = itemView.findViewById();
-//            txtName = itemView.findViewById();
-//            txtDeposit = itemView.findViewById();
-//            txtPayment = itemView.findViewById();
-//            Balance = itemView.findViewById();
-//            txtStatus = itemView.findViewById();
-//            imgRate = itemView.findViewById();
-//            btnEdit = itemView.findViewById();
-//            btnRemove = itemView.findViewById();
+            txtDate     = itemView.findViewById(R.id.txt_date);
+            txtName     = itemView.findViewById(R.id.txt_name);
+            txtPrice    = itemView.findViewById(R.id.txt_price);
+            txtDeposit  = itemView.findViewById(R.id.txt_deposit);
+            txtPayment  = itemView.findViewById(R.id.txt_payment);
+            txtBalance  = itemView.findViewById(R.id.txt_balance);
+            txtStatus   = itemView.findViewById(R.id.txt_status);
 
+            mappingListImageStar();
+
+            btnEdit     = itemView.findViewById(R.id.ib_edit);
+            btnRemove   = itemView.findViewById(R.id.ib_remove);
+        }
+
+        private void mappingListImageStar() {
+            for (int id : listIdImgStar)
+            {
+                ImageView imageView = itemView.findViewById(id);
+                listImgStar.add(imageView);
+            }
         }
     }
 
@@ -76,27 +97,38 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         return new ViewHolder(view);
     }
 
-    // todo: set values
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         History history = mListHistorys.get(position);
         if(history != null){
-
             holder.txtDate.setText(history.getDate());
             holder.txtName.setText(history.getName());
             holder.txtPrice.setText(String.valueOf(history.getPrice()));
             holder.txtDeposit.setText(String.valueOf(history.getDeposit()));
-            //holder.txtPayment.setText(history.getPayment());
-            holder.Balance.setText(mListHistorys.get(position).getName());
-            holder.txtStatus.setText(mListHistorys.get(position).getName());
+            holder.txtPayment.setText(String.valueOf(history.getPayment()));
+            holder.txtBalance.setText(String.valueOf(history.getBalance()));
+            holder.txtStatus.setText(mListener.checkStatus(history.getStatus(),holder.txtStatus));
+
+            setStar(history.getRate(),holder);
 
             holder.btnRemove.setOnClickListener((v) -> mListener.onRemove(history));
-            holder.btnEdit.setOnClickListener((v) -> mListener.onItemsClicked(history));
+            holder.btnEdit.setOnClickListener((v) -> mListener.onEdit(history));
         }
 
     }
 
-    private void clickButtonRemove() {
+    // set count of star into image view
+    private void setStar(int rate, ViewHolder holder) {
+
+        // set star yellow
+        for (int i = 0; i < rate; i++) {
+            holder.listImgStar.get(i).setImageResource(R.drawable.ic_star_yellow);
+        }
+
+        // set star white
+        for (int j= rate; j < holder.listImgStar.size(); j++) {
+            holder.listImgStar.get(j).setImageResource(R.drawable.ic_star_white);
+        }
 
     }
 
@@ -104,7 +136,5 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     public int getItemCount() {
         return mListHistorys.size();
     }
-
-    // todo: mapping view
 
 }

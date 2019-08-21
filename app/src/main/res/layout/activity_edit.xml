@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".ui.activity.EditActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TxtTitleUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/txt_update"
+        app:layout_constraintBottom_toTopOf="@+id/txt_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        style="@style/TxtUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="@string/txt_name_update"
+        app:layout_constraintEnd_toEndOf="@+id/edit_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_name"
+        style="@style/EditAddTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="8dp"
+        android:text="Mai Trung Thuỷ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        style="@style/TxtUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/txt_price"
+        app:layout_constraintStart_toStartOf="@+id/edit_name"
+        app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+
+    <EditText
+        android:id="@+id/edit_price"
+        style="@style/EditAddTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:inputType="number"
+        android:text="5.000.000"
+        app:layout_constraintStart_toStartOf="@+id/txt_price"
+        app:layout_constraintTop_toBottomOf="@+id/txt_price" />
+
+    <TextView
+        android:id="@+id/txt_deposit"
+        style="@style/TxtUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/txt_deposit"
+        app:layout_constraintStart_toStartOf="@+id/edit_price"
+        app:layout_constraintTop_toBottomOf="@+id/edit_price" />
+
+    <EditText
+        android:id="@+id/edit_deposit"
+        style="@style/EditAddTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:inputType="number"
+        android:text="1.000.000"
+        app:layout_constraintStart_toStartOf="@+id/txt_deposit"
+        app:layout_constraintTop_toBottomOf="@+id/txt_deposit" />
+
+    <TextView
+        android:id="@+id/txt_payment"
+        style="@style/TxtUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/txt_payment"
+        app:layout_constraintStart_toStartOf="@+id/edit_deposit"
+        app:layout_constraintTop_toBottomOf="@+id/edit_deposit" />
+
+    <EditText
+        android:id="@+id/edit_payment"
+        style="@style/EditAddTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:inputType="number"
+        android:text="1.000.000"
+        app:layout_constraintStart_toStartOf="@+id/txt_payment"
+        app:layout_constraintTop_toBottomOf="@+id/txt_payment" />
+
+    <TextView
+        android:id="@+id/txt_balance"
+        style="@style/TxtUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/txt_balance"
+        app:layout_constraintStart_toStartOf="@+id/edit_payment"
+        app:layout_constraintTop_toBottomOf="@+id/edit_payment" />
+
+    <EditText
+        android:id="@+id/edit_balance"
+        style="@style/EditAddTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:inputType="number"
+        android:text="3.000.000"
+        app:layout_constraintStart_toStartOf="@+id/txt_balance"
+        app:layout_constraintTop_toBottomOf="@+id/txt_balance" />
+
+    <TextView
+        android:id="@+id/txt_note"
+        style="@style/TxtUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/txt_note"
+        app:layout_constraintStart_toStartOf="@+id/edit_balance"
+        app:layout_constraintTop_toBottomOf="@+id/edit_balance" />
+
+    <EditText
+        android:id="@+id/edit_note"
+        style="@style/EditAddTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="4dp"
+        android:hint="Ý kiến khác"
+        app:layout_constraintStart_toStartOf="@+id/txt_note"
+        app:layout_constraintTop_toBottomOf="@+id/txt_note" />
+
+    <Button
+        style="@style/BtnConfirm"
+        android:layout_width="@dimen/btn_confirm_width"
+        android:layout_height="@dimen/btn_confirm_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/btn_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_note"
+        app:layout_constraintVertical_bias="0.097" />
+</androidx.constraintlayout.widget.ConstraintLayout>

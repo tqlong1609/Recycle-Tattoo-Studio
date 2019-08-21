@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/colorWhiteOrther"/>
+    <corners android:radius="@dimen/radius_btn_cancel"/>
+    <stroke android:color="@color/colorBlack"
+        android:width="@dimen/stroke_width"
+        />
+
+</shape>

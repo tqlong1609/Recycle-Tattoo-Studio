@@ -1,8 +1,29 @@
 <resources>
     <string name="app_name">Tattoo</string>
+
+    <!--login activity-->
     <string name="phone_text">Phone</string>
     <string name="email_text">Email</string>
     <string name="sign_in_text">Sign in</string>
     <string name="version_text">Phiên bản 0.0.2</string>
+
+    <!--dialog remove-->
     <string name="title_history">Lịch sử dịch vụ</string>
+    <string name="title_remove_dialog">Bạn muốn xoá dịch vụ ?</string>
+    <string name="btn_cancel">Huỷ</string>
+    <string name="btn_confirm">Xác nhận</string>
+
+    <!--Add activity-->
+    <string name="txt_name">Tattoo ist</string>
+    <string name="txt_price">Đơn giá</string>
+    <string name="txt_deposit">Đã cọc</string>
+    <string name="txt_payment">Đã thanh toán</string>
+    <string name="txt_balance">Còn lại</string>
+    <string name="txt_note">Ghi chú</string>
+
+    <!--Edit activity-->
+    <string name="txt_update">Cập nhật</string>
+    <string name="txt_name_update">Nhân viên thực hiện</string>
+    <string name="btn_save">Lưu</string>
+
 </resources>
