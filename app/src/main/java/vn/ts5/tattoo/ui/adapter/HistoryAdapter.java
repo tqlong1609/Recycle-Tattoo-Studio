@@ -27,7 +27,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     private ArrayList<History> mListHistorys;
     private OnCallBack mListener;
-    private int mLastPosition = -1;
 
     public interface OnCallBack{
         void onEdit(History history);
@@ -113,7 +112,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
             setStar(history.getRate(),holder);
 
             holder.btnRemove.setOnClickListener((v) -> mListener.onRemove(history));
-            holder.btnEdit.setOnClickListener((v) -> mListener.onItemsClicked(history));
+            holder.btnEdit.setOnClickListener((v) -> mListener.onEdit(history));
         }
 
     }

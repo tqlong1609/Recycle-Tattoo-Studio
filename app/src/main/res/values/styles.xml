@@ -97,7 +97,20 @@
         <!--Edit Text-->
     <style name="EditAddTheme">
         <item name="android:ems">16</item>
-        <item name="android:background">@drawable/edit_login_normal</item>
+        <item name="android:background">@drawable/edit_add_normal</item>
         <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <!--Edit Activity-->
+        <!--Text View-->
+    <style name="TxtTitleUpdate">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <style name="TxtUpdate">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
     </style>
 </resources>

@@ -82,7 +82,9 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
 
     @Override
     public void onEdit(History history) {
-
+        Intent intent = new Intent(MainActivity.this, EditActivity.class);
+        intent.putExtra("dataHistory", history);
+        startActivity(intent);
     }
 
     @Override

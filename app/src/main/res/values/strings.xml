@@ -21,4 +21,9 @@
     <string name="txt_balance">Còn lại</string>
     <string name="txt_note">Ghi chú</string>
 
+    <!--Edit activity-->
+    <string name="txt_update">Cập nhật</string>
+    <string name="txt_name_update">Nhân viên thực hiện</string>
+    <string name="btn_save">Lưu</string>
+
 </resources>
