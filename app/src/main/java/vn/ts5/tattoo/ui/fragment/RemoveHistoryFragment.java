@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,9 +16,33 @@ import vn.ts5.tattoo.R;
 
 public class RemoveHistoryFragment extends DialogFragment {
 
-    @Nullable
+    private Dialog mDialog;
+    private Button mBtnCancel;
+    private Button mBtnConfirm;
+    private OnCallBackDialog mListener;
+
+    public interface OnCallBackDialog{
+        void confirmRemove(Boolean isRemove);
+    }
+
+    @NonNull
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return getActivity().getLayoutInflater().inflate(R.layout.dialog_remove,container);
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        mDialog = new Dialog(getActivity());
+        mDialog.setContentView(R.layout.dialog_remove);
+
+        mListener = (OnCallBackDialog) getActivity();
+
+        setupViews();
+
+        mBtnCancel.setOnClickListener((v) -> mListener.confirmRemove(false));
+        mBtnConfirm.setOnClickListener((v) -> mListener.confirmRemove(true));
+
+        return mDialog;
+    }
+
+    private void setupViews() {
+        mBtnCancel = mDialog.findViewById(R.id.btn_cancel);
+        mBtnConfirm = mDialog.findViewById(R.id.btn_confirm);
     }
 }

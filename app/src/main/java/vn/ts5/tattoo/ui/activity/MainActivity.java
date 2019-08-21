@@ -80,12 +80,8 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
 
     @Override
     public void onRemove(History history) {
-        //removeHistoryFragment = new RemoveHistoryFragment();
-        //removeHistoryFragment.show(getSupportFragmentManager(),"dialog");
-        Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.dialog_remove);
-        dialog.show();
-
+        removeHistoryFragment = new RemoveHistoryFragment();
+        removeHistoryFragment.show(getSupportFragmentManager(),"dialog");
     }
 
     @Override
