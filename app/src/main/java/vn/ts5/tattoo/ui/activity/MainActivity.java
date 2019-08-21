@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.data.model.History;
 import vn.ts5.tattoo.ui.adapter.HistoryAdapter;
-import vn.ts5.tattoo.ui.fragment.RemoveHistoryFragment;
+import vn.ts5.tattoo.ui.dialog.RemoveHistoryFragment;
 
 public class MainActivity extends AppCompatActivity implements HistoryAdapter.OnCallBack, RemoveHistoryFragment.OnCallBackDialog {
 

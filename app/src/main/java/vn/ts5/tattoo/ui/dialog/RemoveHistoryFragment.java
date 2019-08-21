@@ -1,4 +1,4 @@
-package vn.ts5.tattoo.ui.fragment;
+package vn.ts5.tattoo.ui.dialog;
 
 import android.app.Dialog;
 import android.os.Bundle;

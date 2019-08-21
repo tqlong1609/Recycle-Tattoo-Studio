@@ -26,4 +26,16 @@
     <string name="txt_name_update">Nhân viên thực hiện</string>
     <string name="btn_save">Lưu</string>
 
+    <!--Rating activity-->
+    <string name="txt_rating">Rating</string>
+    <string name="txt_rating_question">BẠN CHƯA HÀI LÒNG VỀ ĐIỀU GÌ ?</string>
+    <string name="txt_attitude">Thái độ nhân viên</string>
+    <string name="txt_toilet">Vệ sinh</string>
+    <string name="txt_quality">Chất lượng hình săm</string>
+    <string name="txt_comment">Viết nhận xét</string>
+    <string name="btn_finish">Hoàn tất</string>
+
+    <!--Dialog notification success-->
+    <string name="txt_success">Chức mừng bạn đã TÁI CHẾ thành công</string>
+
 </resources>

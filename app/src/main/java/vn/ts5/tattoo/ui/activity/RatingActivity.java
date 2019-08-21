@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import vn.ts5.tattoo.R;
+
 public class RatingActivity extends AppCompatActivity {
 
     @Override

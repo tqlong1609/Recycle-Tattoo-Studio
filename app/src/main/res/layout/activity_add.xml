@@ -145,6 +145,8 @@
         <EditText
             android:id="@+id/edit_note"
             android:hint="Ý kiến khác"
+            android:minLines="3"
+            android:gravity="top"
             style="@style/EditAddTheme"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
@@ -153,6 +155,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txt_note" />
 
         <Button
+            android:id="@+id/btn_confirm"
             style="@style/BtnConfirm"
             android:layout_width="@dimen/btn_confirm_width"
             android:layout_height="@dimen/btn_confirm_height"
