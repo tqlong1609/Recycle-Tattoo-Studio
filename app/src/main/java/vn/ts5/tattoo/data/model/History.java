@@ -1,9 +1,11 @@
 package vn.ts5.tattoo.data.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Nani on 2019-08-20.
  */
-public class History {
+public class History implements Serializable {
     private String id;
     private String date;
     private String name;

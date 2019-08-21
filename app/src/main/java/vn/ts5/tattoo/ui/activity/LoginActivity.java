@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.utils.ValidateUtil;
@@ -47,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
     // open MainActivity class
     private void openMainActivity() {
         startActivity(new Intent(LoginActivity.this,MainActivity.class));
-        overridePendingTransition(R.anim.enter,R.anim.exit);
+        overridePendingTransition(R.anim.left_in,R.anim.right_in);
     }
 
     private void setupViews(){

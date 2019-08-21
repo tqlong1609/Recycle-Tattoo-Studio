@@ -2,27 +2,31 @@ package vn.ts5.tattoo.ui.fragment;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import vn.ts5.tattoo.R;
+import vn.ts5.tattoo.data.model.History;
 
 public class RemoveHistoryFragment extends DialogFragment {
 
     private Dialog mDialog;
     private Button mBtnCancel;
     private Button mBtnConfirm;
+    private ImageButton mIbExit;
+    private History history;
     private OnCallBackDialog mListener;
 
     public interface OnCallBackDialog{
-        void confirmRemove(Boolean isRemove);
+        void confirmRemove(Boolean isRemove, History history);
+    }
+
+    public RemoveHistoryFragment(History history) {
+        this.history = history;
     }
 
     @NonNull
@@ -35,14 +39,16 @@ public class RemoveHistoryFragment extends DialogFragment {
 
         setupViews();
 
-        mBtnCancel.setOnClickListener((v) -> mListener.confirmRemove(false));
-        mBtnConfirm.setOnClickListener((v) -> mListener.confirmRemove(true));
+        mBtnCancel.setOnClickListener((v) -> mListener.confirmRemove(false,history));
+        mBtnConfirm.setOnClickListener((v) -> mListener.confirmRemove(true,history));
+        mIbExit.setOnClickListener((v) -> mListener.confirmRemove(false,history));
 
         return mDialog;
     }
 
     private void setupViews() {
-        mBtnCancel = mDialog.findViewById(R.id.btn_cancel);
+        mBtnCancel  = mDialog.findViewById(R.id.btn_cancel);
         mBtnConfirm = mDialog.findViewById(R.id.btn_confirm);
+        mIbExit     = mDialog.findViewById(R.id.ib_exit);
     }
 }

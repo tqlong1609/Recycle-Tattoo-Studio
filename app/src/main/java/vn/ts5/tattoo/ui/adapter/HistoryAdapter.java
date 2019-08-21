@@ -3,6 +3,8 @@ package vn.ts5.tattoo.ui.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -25,9 +27,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     private ArrayList<History> mListHistorys;
     private OnCallBack mListener;
+    private int mLastPosition = -1;
 
     public interface OnCallBack{
-        void onItemsClicked(History history);
+        void onEdit(History history);
         void onRemove(History history);
         String checkStatus(int status, TextView txtStatus);
     }

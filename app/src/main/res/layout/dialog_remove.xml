@@ -19,11 +19,12 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396" />
+        app:layout_constraintVertical_bias="0.39" />
 
 
     <Button
         android:id="@+id/btn_cancel"
+        android:textAllCaps="false"
         style="@style/BtnCancel"
         android:layout_width="@dimen/btn_cancel_width"
         android:layout_height="@dimen/btn_cancel_height"
@@ -55,6 +56,7 @@
         app:layout_constraintVertical_bias="0.384" />
 
     <ImageButton
+        android:id="@+id/ib_exit"
         android:layout_width="@dimen/ib_exit_width"
         android:layout_height="@dimen/ib_exit_height"
         android:layout_marginStart="8dp"
@@ -62,7 +64,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="#ff0"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="@+id/textView"

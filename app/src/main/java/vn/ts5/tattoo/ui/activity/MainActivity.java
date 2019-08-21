@@ -1,17 +1,15 @@
 package vn.ts5.tattoo.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Dialog;
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +20,7 @@ import vn.ts5.tattoo.data.model.History;
 import vn.ts5.tattoo.ui.adapter.HistoryAdapter;
 import vn.ts5.tattoo.ui.fragment.RemoveHistoryFragment;
 
-public class MainActivity extends AppCompatActivity implements HistoryAdapter.OnCallBack {
+public class MainActivity extends AppCompatActivity implements HistoryAdapter.OnCallBack, RemoveHistoryFragment.OnCallBackDialog {
 
     public static final int NOT_COMPLETE = 0;
     public static final int COMPLETE = 1;
@@ -30,22 +28,27 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
     private RecyclerView mRcvHistory;
     private HistoryAdapter mHistoryAdapter;
     private RemoveHistoryFragment removeHistoryFragment;
+    private ArrayList<History> historyArrayList;
+    private Button mBtnCreateNew;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setupViews();
+        loadValuesRecyclerView();
+
+        mBtnCreateNew.setOnClickListener((v) -> startActivity(
+                new Intent(MainActivity.this,AddActivity.class)));
     }
 
-    private void setupViews() {
-        mRcvHistory = findViewById(R.id.rcv_history);
+    private void loadValuesRecyclerView() {
         mRcvHistory.setHasFixedSize(true);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
         mRcvHistory.setLayoutManager(layoutManager);
 
-        ArrayList<History> historyArrayList = addValuesIntoArrayList();
+        historyArrayList = addValuesIntoArrayList();
 
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,layoutManager.getOrientation());
         mRcvHistory.addItemDecoration(dividerItemDecoration);
@@ -53,6 +56,11 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
 
         mHistoryAdapter = new HistoryAdapter(historyArrayList,this);
         mRcvHistory.setAdapter(mHistoryAdapter);
+    }
+
+    private void setupViews() {
+        mRcvHistory = findViewById(R.id.rcv_history);
+        mBtnCreateNew = findViewById(R.id.btn_create_new);
     }
 
     private ArrayList<History> addValuesIntoArrayList() {
@@ -72,15 +80,14 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
         return historyArrayList;
     }
 
-
     @Override
-    public void onItemsClicked(History history) {
-        Toast.makeText(MainActivity.this,"Edit" + history.getName(),Toast.LENGTH_SHORT).show();
+    public void onEdit(History history) {
+
     }
 
     @Override
     public void onRemove(History history) {
-        removeHistoryFragment = new RemoveHistoryFragment();
+        removeHistoryFragment = new RemoveHistoryFragment(history);
         removeHistoryFragment.show(getSupportFragmentManager(),"dialog");
     }
 
@@ -98,5 +105,24 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
                 return "Chưa hoàn thành";
         }
         return "Error";
+    }
+
+    @Override
+    public void confirmRemove(Boolean isRemove, History history) {
+        if(isRemove){
+            historyArrayList.remove(history);
+            mHistoryAdapter.notifyDataSetChanged();
+            removeHistoryFragment.dismiss();
+            Toast.makeText(MainActivity.this,"Remove success",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            removeHistoryFragment.dismiss();
+        }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.left_out,R.anim.right_out);
     }
 }
