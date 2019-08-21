@@ -7,12 +7,34 @@ public class History {
     private String id;
     private String date;
     private String name;
-    private int status; //trang thai            // ?? int !string
+    private int status; //trang thai
     private int rate;   //danh gia
     private long price; //don gia
     private long deposit; // da coc
     private long payment; // da thanh toan
     private long balance; // con lai
+
+    public History(String id, String date, String name, int status, int rate, long price, long deposit, long payment, long balance) {
+        this.id = id;
+        this.date = date;
+        this.name = name;
+        this.status = status;
+        this.rate = checkRate(rate);
+        this.price = price;
+        this.deposit = deposit;
+        this.payment = payment;
+        this.balance = balance;
+    }
+
+    private int checkRate(int rate) {
+        if(rate > 5){
+            return 5;
+        }
+        else if(rate < 0){
+            return 0;
+        }
+        else return rate;
+    }
 
     public String getId() {
         return id;
@@ -51,7 +73,7 @@ public class History {
     }
 
     public void setRate(int rate) {
-        this.rate = rate;
+        this.rate = checkRate(rate);
     }
 
     public long getPrice() {

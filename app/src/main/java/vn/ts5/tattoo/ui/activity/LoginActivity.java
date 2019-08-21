@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void clickButtonSignIn() {
-        if(validation())
+        //if(validation())
         openMainActivity();
     }
 

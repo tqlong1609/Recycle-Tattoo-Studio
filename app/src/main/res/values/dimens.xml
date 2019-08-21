@@ -60,6 +60,7 @@
     <dimen name="btn_padding_left_activity_main">20dp</dimen>
 
     <!--View history-->
+    <dimen name="layout_height">280dp</dimen>
     <dimen name="img_margin_top">12dp</dimen>
     <dimen name="img_margin_start">12dp</dimen>
     <dimen name="txt_margin_top">5dp</dimen>

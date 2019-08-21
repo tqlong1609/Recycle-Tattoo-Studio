@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
+    android:layout_height="@dimen/layout_height"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
@@ -154,39 +154,39 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/ic_star_yellow" />
+             />
 
         <ImageView
             android:id="@+id/img_star_2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/ic_star_yellow" />
+             />
 
         <ImageView
             android:id="@+id/img_star_3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/ic_star_yellow" />
+             />
 
         <ImageView
             android:id="@+id/img_star_4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/ic_star_white" />
+             />
 
         <ImageView
             android:id="@+id/img_star_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/ic_star_white" />
+             />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/img_edit"
+    <ImageButton
+        android:id="@+id/ib_edit"
         android:background="#8BC34A"
         android:layout_width="@dimen/img_edit_width"
         android:layout_height="@dimen/img_edit_height"
@@ -195,17 +195,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <ImageView
-        android:id="@+id/img_remove"
+    <ImageButton
+        android:id="@+id/ib_remove"
         android:layout_width="@dimen/img_edit_width"
         android:layout_height="@dimen/img_edit_height"
         android:layout_marginStart="12dp"
-        android:layout_marginEnd="8dp"
-        android:background="#8BC34A"
+        android:layout_marginEnd="28dp"
+        android:background="#637254"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.272"
-        app:layout_constraintStart_toEndOf="@+id/img_edit"
-        app:layout_constraintTop_toTopOf="@+id/img_edit" />
+        app:layout_constraintStart_toEndOf="@+id/ib_edit"
+        app:layout_constraintTop_toTopOf="@+id/ib_edit" />
 
 
 
