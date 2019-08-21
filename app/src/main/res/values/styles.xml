@@ -63,4 +63,27 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/colorYellowOrange</item>
     </style>
+
+    <!-- Dialog remove-->
+        <!--TextView-->
+    <style name="TxtTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+        <!--Button-->
+    <style name="BtnCancel">
+        <item name="android:textSize">@dimen/txt_size</item>
+        <item name="android:background">@drawable/btn_cancel_selector</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:text">@string/btn_cancel</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="BtnConfirm">
+        <item name="android:textSize">@dimen/txt_size</item>
+        <item name="android:background">@drawable/btn_login_selector</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:text">@string/btn_confirm</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

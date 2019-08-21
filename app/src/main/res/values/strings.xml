@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">Tattoo</string>
+
+    <!--login activity-->
     <string name="phone_text">Phone</string>
     <string name="email_text">Email</string>
     <string name="sign_in_text">Sign in</string>
     <string name="version_text">Phiên bản 0.0.2</string>
+
+    <!--dialog remove-->
     <string name="title_history">Lịch sử dịch vụ</string>
+    <string name="title_remove_dialog">Bạn muốn xoá dịch vụ ?</string>
+    <string name="btn_cancel">Huỷ</string>
+    <string name="btn_confirm">Xác nhận</string>
 </resources>

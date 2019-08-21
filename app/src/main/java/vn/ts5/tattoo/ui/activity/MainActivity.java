@@ -3,11 +3,13 @@ package vn.ts5.tattoo.ui.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.data.model.History;
 import vn.ts5.tattoo.ui.adapter.HistoryAdapter;
+import vn.ts5.tattoo.ui.fragment.RemoveHistoryFragment;
 
 public class MainActivity extends AppCompatActivity implements HistoryAdapter.OnCallBack {
 
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
 
     private RecyclerView mRcvHistory;
     private HistoryAdapter mHistoryAdapter;
+    private RemoveHistoryFragment removeHistoryFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +80,12 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
 
     @Override
     public void onRemove(History history) {
+        //removeHistoryFragment = new RemoveHistoryFragment();
+        //removeHistoryFragment.show(getSupportFragmentManager(),"dialog");
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_remove);
+        dialog.show();
+
     }
 
     @Override
