@@ -5,8 +5,8 @@
         <layer-list>
             <item android:drawable="@drawable/edit_login_normal"/>
             <item>
-                <bitmap android:src="@drawable/ic_plus"
-                    android:gravity="bottom|right"/>
+                <bitmap android:src="@drawable/ic_star_yellow"
+                    android:gravity="center_vertical|right"/>
             </item>
         </layer-list>
     </item>

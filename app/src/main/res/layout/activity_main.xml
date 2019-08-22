@@ -12,19 +12,6 @@
         android:layout_weight="3"
         layout="@layout/header_information"/>
 
-    <Button
-        android:id="@+id/btn_create_new"
-        style="@style/BtnCreateNew"
-        android:paddingEnd="100dp"
-        android:paddingLeft="110dp"
-        android:drawableLeft="@drawable/ic_plus"
-        android:textAllCaps="false"
-        android:text="Tạo mới"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_login_selector"
-        android:layout_marginLeft="@dimen/btn_margin_left"
-        android:layout_width="@dimen/btn_width_activity_main"
-        android:layout_height="50dp" />
     <TextView
         android:text="@string/title_history"
         style="@style/TxtHistory"
@@ -32,6 +19,20 @@
         android:paddingLeft="@dimen/btn_padding_left_activity_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_create_new"
+        style="@style/BtnCreateNew"
+        android:layout_width="@dimen/btn_width_activity_main"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/btn_margin_left"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_login_selector"
+        android:drawableLeft="@drawable/ic_plus"
+        android:paddingLeft="110dp"
+        android:paddingEnd="100dp"
+        android:text="Tạo mới"
+        android:textAllCaps="false" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv_history"

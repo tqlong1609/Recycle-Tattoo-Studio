@@ -45,6 +45,7 @@
     <string name="txt_title_register">INFORMATION CUSTOMER</string>
     <string name="txt_name_register">Name</string>
     <string name="txt_birthday">Birthday</string>
+    <string name="txt_sex">Sex</string>
     <string name="txt_phone">Phone</string>
     <string name="txt_email">Email</string>
 

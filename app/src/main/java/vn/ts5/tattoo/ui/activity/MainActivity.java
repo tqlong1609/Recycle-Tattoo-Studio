@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
         setupViews();
         loadValuesRecyclerView();
 
-        mBtnCreateNew.setOnClickListener((v) -> startActivity(
-                new Intent(MainActivity.this,AddActivity.class)));
+        mBtnCreateNew.setOnClickListener((v) -> startActivity(new Intent(MainActivity.this,AddActivity.class)));
     }
 
     private void loadValuesRecyclerView() {
