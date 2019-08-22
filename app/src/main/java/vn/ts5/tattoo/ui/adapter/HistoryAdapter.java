@@ -18,6 +18,7 @@ import java.util.List;
 
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.data.model.History;
+import vn.ts5.tattoo.ui.activity.RatingActivity;
 
 /**
  * Created by Nani on 2019-08-19.
@@ -36,26 +37,18 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtDate;
-        TextView txtName;
-        TextView txtPrice;
-        TextView txtDeposit;
-        TextView txtPayment;
-        TextView txtBalance;
-        TextView txtStatus;
-
-        int[] listIdImgStar
-                = {R.id.img_star_1, R.id.img_star_2, R.id.img_star_3, R.id.img_star_4, R.id.img_star_5};
+        private TextView txtDate;
+        private TextView txtName;
+        private TextView txtPrice;
+        private TextView txtDeposit;
+        private TextView txtPayment;
+        private TextView txtBalance;
+        private TextView txtStatus;
 
         List<ImageView> listImgStar;
 
         ImageButton btnEdit;
         ImageButton btnRemove;
-
-        public int getCountStar()
-        {
-            return listIdImgStar.length;
-        }
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -76,7 +69,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         }
 
         private void mappingListImageStar() {
-            for (int id : listIdImgStar)
+            for (int id : RatingActivity.LIST_ID_IMG_STAR)
             {
                 ImageView imageView = itemView.findViewById(id);
                 listImgStar.add(imageView);

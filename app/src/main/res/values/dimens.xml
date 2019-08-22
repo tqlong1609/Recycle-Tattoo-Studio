@@ -82,9 +82,16 @@
     <dimen name="btn_confirm_width">120dp</dimen>
     <dimen name="btn_confirm_height">40dp</dimen>
     <dimen name="stroke_add_width">1dp</dimen>
+    <dimen name="edit_ems">16</dimen>
 
     <!--Rating Activity-->
     <dimen name="edit_width_comment">370dp</dimen>
     <dimen name="edit_height_comment">174dp</dimen>
+
+    <!--Register activity-->
+    <dimen name="txt_title">280dp</dimen>
+    <dimen name="img_margin_title">8dp</dimen>
+    <dimen name="img_height_title">7dp</dimen>
+    <dimen name="spn_padding">3dp</dimen>
 
 </resources>

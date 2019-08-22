@@ -6,6 +6,8 @@
     <string name="email_text">Email</string>
     <string name="sign_in_text">Sign in</string>
     <string name="version_text">Phiên bản 0.0.2</string>
+    <string name="register_text">Register account</string>
+
 
     <!--dialog remove-->
     <string name="title_history">Lịch sử dịch vụ</string>
@@ -36,6 +38,14 @@
     <string name="btn_finish">Hoàn tất</string>
 
     <!--Dialog notification success-->
-    <string name="txt_success">Chức mừng bạn đã TÁI CHẾ thành công</string>
+    <string name="txt_notificate">Chúc mừng bạn đã TÁI CHẾ</string>
+    <string name="txt_success">thành công</string>
+
+    <!--Register activity-->
+    <string name="txt_title_register">INFORMATION CUSTOMER</string>
+    <string name="txt_name_register">Name</string>
+    <string name="txt_birthday">Birthday</string>
+    <string name="txt_phone">Phone</string>
+    <string name="txt_email">Email</string>
 
 </resources>

@@ -16,6 +16,7 @@
         <activity android:name=".ui.activity.LoginActivity" />
         <activity android:name=".ui.activity.RegisterActivity" />
         <activity android:name=".ui.activity.RatingActivity" />
+        <activity android:name=".ui.activity.EditActivity" />
         <activity android:name=".ui.activity.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

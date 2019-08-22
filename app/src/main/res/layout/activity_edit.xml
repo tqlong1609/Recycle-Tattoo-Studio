@@ -145,6 +145,8 @@
 
     <EditText
         android:id="@+id/edit_note"
+        android:gravity="top"
+        android:minLines="3"
         style="@style/EditAddTheme"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
