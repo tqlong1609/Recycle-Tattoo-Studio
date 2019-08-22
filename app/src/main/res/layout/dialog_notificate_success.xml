@@ -11,7 +11,7 @@
         android:layout_height="@dimen/ib_exit_height"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#ff0"
+        android:background="@drawable/ic_exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.957"

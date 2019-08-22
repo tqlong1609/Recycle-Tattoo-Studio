@@ -11,7 +11,7 @@
         android:layout_height="@dimen/image_height_header"
         android:layout_marginStart="@dimen/padding_small"
         android:layout_marginTop="@dimen/padding_small"
-        android:background="#ff0"
+        android:background="@drawable/ic_user"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +31,7 @@
         android:layout_width="@dimen/image_width_header"
         android:layout_height="@dimen/image_height_header"
         android:layout_marginTop="8dp"
-        android:background="#ff00"
+        android:background="@drawable/ic_birthday"
         app:layout_constraintStart_toStartOf="@+id/img_name"
         app:layout_constraintTop_toBottomOf="@+id/img_name" />
 
@@ -51,7 +51,7 @@
         android:layout_width="@dimen/image_width_header"
         android:layout_height="@dimen/image_height_header"
         android:layout_marginTop="8dp"
-        android:background="#1100FF"
+        android:background="@drawable/ic_phone"
         app:layout_constraintStart_toStartOf="@+id/img_birthday"
         app:layout_constraintTop_toBottomOf="@+id/img_birthday" />
 
@@ -71,7 +71,7 @@
         android:layout_width="@dimen/image_width_header"
         android:layout_height="@dimen/image_height_header"
         android:layout_marginTop="8dp"
-        android:background="#26FF00"
+        android:background="@drawable/ic_email"
         app:layout_constraintStart_toStartOf="@+id/img_phone"
         app:layout_constraintTop_toBottomOf="@+id/img_phone" />
 
@@ -93,7 +93,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#2196F3"
+        android:background="@drawable/ic_information"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.864"
