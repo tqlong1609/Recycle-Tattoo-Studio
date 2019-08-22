@@ -4,17 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.ui.adapter.SpinnerCumtomAdapter;
+import vn.ts5.tattoo.utils.ValidateUtil;
 
 public class RegisterActivity extends AppCompatActivity {
+
+    private EditText mEditEmail;
+    private ImageButton mIbConfirmAdd;
 
     private Spinner mSpnDate;
     private Spinner mSpnMonth;
@@ -44,6 +53,24 @@ public class RegisterActivity extends AppCompatActivity {
 
         setupSpinnerAdapter(mListSex);
         mSpnSex.setAdapter(spinnerCumtomAdapter);
+
+        mIbConfirmAdd.setOnClickListener((v) -> clickButtonConfirmAdd());
+    }
+
+    private void clickButtonConfirmAdd() {
+        if(validation()) {
+            // todo: add success
+        }
+    }
+
+    // check input values
+    private boolean validation() {
+        String email = mEditEmail.getText().toString();
+        if(!ValidateUtil.isValidEmail(email)){
+            Toast.makeText(getApplicationContext(),"Please enter correct format email",Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 
     private void addListSex() {
@@ -93,12 +120,14 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void setupViews() {
-        mSpnDate    = findViewById(R.id.spn_date);
-        mSpnMonth   = findViewById(R.id.spn_month);
-        mSpnSex     = findViewById(R.id.spn_sex);
+        mEditEmail      = findViewById(R.id.edit_email);
+        mIbConfirmAdd   = findViewById(R.id.ib_confirm_add);
+        mSpnDate        = findViewById(R.id.spn_date);
+        mSpnMonth       = findViewById(R.id.spn_month);
+        mSpnSex         = findViewById(R.id.spn_sex);
 
-        mListDate = new ArrayList<>();
-        mListMonth = new ArrayList<>();
-        mListSex = new ArrayList<>();
+        mListDate   = new ArrayList<>();
+        mListMonth  = new ArrayList<>();
+        mListSex    = new ArrayList<>();
     }
 }
