@@ -19,9 +19,11 @@ public class RegisterActivity extends AppCompatActivity {
     private Spinner mSpnDate;
     private Spinner mSpnMonth;
     private Spinner mSpnSex;
+
     private ArrayList<String> mListDate;
     private ArrayList<String> mListMonth;
     private ArrayList<String> mListSex;
+
     private SpinnerCumtomAdapter spinnerCumtomAdapter;
 
     @Override
@@ -29,13 +31,17 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         setupViews();
+
         addListDate();
         addListMonth();
         addListSex();
+
         setupSpinnerAdapter(mListDate);
         mSpnDate.setAdapter(spinnerCumtomAdapter);
+
         setupSpinnerAdapter(mListMonth);
         mSpnMonth.setAdapter(spinnerCumtomAdapter);
+
         setupSpinnerAdapter(mListSex);
         mSpnSex.setAdapter(spinnerCumtomAdapter);
     }
@@ -47,32 +53,16 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void addListMonth() {
         mListMonth.add("Month");
-        mListMonth.add("1");
-        mListMonth.add("2");
-        mListMonth.add("3");
-        mListMonth.add("4");
-        mListMonth.add("5");
-        mListMonth.add("6");
-        mListMonth.add("7");
-        mListMonth.add("8");
-        mListMonth.add("9");
-        mListMonth.add("10");
-        mListMonth.add("11");
-        mListMonth.add("12");
+        for (int i = 1; i < 13; i++) {
+            mListMonth.add(String.valueOf(i));
+        }
     }
 
     private void addListDate() {
         mListDate.add("Date");
-        mListDate.add("1");
-        mListDate.add("2");
-        mListDate.add("3");
-        mListDate.add("4");
-        mListDate.add("5");
-        mListDate.add("6");
-        mListDate.add("7");
-        mListDate.add("8");
-        mListDate.add("9");
-        mListDate.add("10");
+        for (int i = 1; i < 32 ; i++) {
+            mListDate.add(String.valueOf(i));
+        }
     }
 
     private void setupSpinnerAdapter(ArrayList<String> mList) {
