@@ -17,6 +17,7 @@
         android:layout_marginTop="88dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-light"
         android:text="@string/txt_title_register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,6 +54,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-light"
         android:text="@string/txt_name_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -87,11 +89,11 @@
         android:layout_width="@dimen/spn_width"
         android:layout_height="@dimen/spn_height"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/txt_birthday"
-        app:layout_constraintHorizontal_bias="0.258"
-        app:layout_constraintStart_toStartOf="@+id/txt_birthday"
-        app:layout_constraintTop_toBottomOf="@+id/txt_birthday"/>
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_birthday" />
 
     <Spinner
         android:id="@+id/spn_month"
@@ -107,13 +109,13 @@
         style="@style/TxtInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/txt_sex"
         app:layout_constraintEnd_toEndOf="@+id/edit_name"
-        app:layout_constraintHorizontal_bias="0.135"
-        app:layout_constraintStart_toEndOf="@+id/txt_birthday"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spn_sex"
         app:layout_constraintTop_toBottomOf="@+id/edit_name" />
 
     <Spinner
