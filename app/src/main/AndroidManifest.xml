@@ -13,11 +13,12 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".ui.activity.AddActivity" >
         </activity>
-        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.LoginActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".ui.activity.RegisterActivity" />
         <activity android:name=".ui.activity.RatingActivity" />
         <activity android:name=".ui.activity.EditActivity" />
-        <activity android:name=".ui.activity.SplashActivity" >
+        <activity android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
