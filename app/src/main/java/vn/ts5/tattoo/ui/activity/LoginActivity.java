@@ -51,10 +51,10 @@ public class LoginActivity extends BaseActivity {
 
     @OnClick(R.id.btn_sign_in)
     public void onClickSignIn(View view) {
-        startActivity(new Intent(LoginActivity.this, FinishActivity.class));
-        overridePendingTransition(R.anim.left_in, R.anim.right_in);
-//        if (validation()) {
-//            openMainActivity();
-//        }
+//        startActivity(new Intent(LoginActivity.this, FinishActivity.class));
+//        overridePendingTransition(R.anim.left_in, R.anim.right_in);
+        if (validation()) {
+            openMainActivity();
+        }
     }
 }
