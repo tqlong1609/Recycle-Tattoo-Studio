@@ -1,64 +1,55 @@
 package vn.ts5.tattoo.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.widget.Button;
+import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
+import butterknife.BindView;
+import butterknife.OnClick;
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.utils.ValidateUtil;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
+    @BindView(R.id.edt_email)
+    EditText etEmail;
 
-    private Button mBtnSignIn;
-    private EditText etEmail;
-    private TextView txtRegister;
+    @BindView(R.id.edt_phone)
+    EditText etPhone;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        setupViews();
-        mBtnSignIn.setOnClickListener((v) -> clickButtonSignIn());
-        txtRegister.setOnClickListener((v) -> startActivity(
-                new Intent(LoginActivity.this,RegisterActivity.class)));
+        initView();
+
     }
 
-    private void clickButtonSignIn() {
-        //if(validation())
-        openMainActivity();
-    }
 
     private boolean validation() {
         String email = etEmail.getText().toString();
-        if(TextUtils.isEmpty(email)){
+        if (TextUtils.isEmpty(email)) {
             //TODO: show messege error
             return false;
         }
-        if(!ValidateUtil.isValidEmail(email)){
-
+        if (!ValidateUtil.isValidEmail(email)) {
+            return false;
         }
         return true;
     }
 
     // open MainActivity class
     private void openMainActivity() {
-        startActivity(new Intent(LoginActivity.this,MainActivity.class));
-        overridePendingTransition(R.anim.left_in,R.anim.right_in);
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        overridePendingTransition(R.anim.left_in, R.anim.right_in);
     }
 
-    private void setupViews(){
-        etEmail     = findViewById(R.id.edt_email);
-        mBtnSignIn  = findViewById(R.id.btn_sign_in);
-        txtRegister = findViewById(R.id.txt_register);
-        txtRegister.setPaintFlags(txtRegister.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
+    @OnClick(R.id.btn_sign_in)
+    public void onClickSignIn(View view) {
+        if (validation()) {
+            openMainActivity();
+        }
     }
 }
