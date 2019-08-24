@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image"
     tools:context=".ui.activity.LoginActivity">
 
     <ImageView
         android:id="@+id/iv_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,15 +23,15 @@
             android:layout_width="@dimen/image_width"
             android:layout_height="@dimen/image_height"
             android:layout_gravity="center_horizontal"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_tattoo_logo" />
 
         <TextView
             style="@style/TextLoginTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_small"
-            android:text="@string/email_text" />
+            android:text="@string/txt_user" />
 
 
         <EditText
@@ -65,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_medium" />
     </LinearLayout>
+
     <TextView
         style="@style/TextVersionTheme"
         android:layout_width="wrap_content"
