@@ -98,4 +98,7 @@
     <dimen name="btn_width_add">150dp</dimen>
     <dimen name="btn_height_add">40dp</dimen>
 
+    <!--Add activity-->
+    <dimen name="edit_height">40dp</dimen>
+
 </resources>
