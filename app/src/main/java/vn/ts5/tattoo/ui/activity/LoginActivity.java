@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import butterknife.BindView;
 import butterknife.OnClick;
+import android.widget.Toast;
+
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.utils.ValidateUtil;
 
@@ -26,18 +28,19 @@ public class LoginActivity extends BaseActivity {
         initView();
 
     }
-
-
     private boolean validation() {
         String email = etEmail.getText().toString();
-        if (TextUtils.isEmpty(email)) {
-            //TODO: show messege error
+        String phone = etPhone.getText().toString();
+        if(TextUtils.isEmpty(email) || TextUtils.isEmpty(phone)){
+            Toast.makeText(getApplicationContext(),"Please enter complete full",Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (!ValidateUtil.isValidEmail(email)) {
+        if(!ValidateUtil.isValidEmail(email)){
+            Toast.makeText(getApplicationContext(),"Please enter correct format email",Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
+
     }
 
     // open MainActivity class

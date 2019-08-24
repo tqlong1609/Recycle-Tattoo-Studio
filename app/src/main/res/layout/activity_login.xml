@@ -33,6 +33,7 @@
             android:layout_margin="@dimen/padding_small"
             android:text="@string/email_text" />
 
+
         <EditText
             android:id="@+id/edt_email"
             style="@style/EditLoginTheme"

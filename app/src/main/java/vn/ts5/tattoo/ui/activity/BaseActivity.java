@@ -17,6 +17,6 @@ public class BaseActivity extends AppCompatActivity {
     }
     public void initView(){
         ButterKnife.bind(this);
-
     }
+    
 }
