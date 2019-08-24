@@ -12,7 +12,7 @@ import androidx.fragment.app.DialogFragment;
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.data.model.History;
 
-public class RemoveHistoryFragment extends DialogFragment {
+public class DlgRemoveHistoryFragment extends DialogFragment {
 
     private Dialog mDialog;
     private Button mBtnCancel;
@@ -25,7 +25,7 @@ public class RemoveHistoryFragment extends DialogFragment {
         void confirmRemove(Boolean isRemove, History history);
     }
 
-    public RemoveHistoryFragment(History history) {
+    public DlgRemoveHistoryFragment(History history) {
         this.history = history;
     }
 

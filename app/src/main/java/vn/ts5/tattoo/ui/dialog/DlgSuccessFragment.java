@@ -10,7 +10,7 @@ import androidx.fragment.app.DialogFragment;
 
 import vn.ts5.tattoo.R;
 
-public class NotificateSuccessFragment extends DialogFragment {
+public class DlgSuccessFragment extends DialogFragment {
 
     private Dialog mDialog;
     private ImageButton ib_mBtnExit;

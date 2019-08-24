@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 import vn.ts5.tattoo.R;
-import vn.ts5.tattoo.ui.dialog.NotificateSuccessFragment;
+import vn.ts5.tattoo.ui.dialog.DlgSuccessFragment;
 
 public class RatingActivity extends AppCompatActivity {
 
@@ -31,7 +31,7 @@ public class RatingActivity extends AppCompatActivity {
 
         ratingStar();
 
-        mBtnFinish.setOnClickListener((v) -> new NotificateSuccessFragment().show(
+        mBtnFinish.setOnClickListener((v) -> new DlgSuccessFragment().show(
                 getSupportFragmentManager(),"dialog_success"));
     }
 

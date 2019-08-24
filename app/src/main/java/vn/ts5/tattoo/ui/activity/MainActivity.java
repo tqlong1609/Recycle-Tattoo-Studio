@@ -18,16 +18,16 @@ import java.util.ArrayList;
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.data.model.History;
 import vn.ts5.tattoo.ui.adapter.HistoryAdapter;
-import vn.ts5.tattoo.ui.dialog.RemoveHistoryFragment;
+import vn.ts5.tattoo.ui.dialog.DlgRemoveHistoryFragment;
 
-public class MainActivity extends AppCompatActivity implements HistoryAdapter.OnCallBack, RemoveHistoryFragment.OnCallBackDialog {
+public class MainActivity extends AppCompatActivity implements HistoryAdapter.OnCallBack, DlgRemoveHistoryFragment.OnCallBackDialog {
 
     public static final int NOT_COMPLETE = 0;
     public static final int COMPLETE = 1;
 
     private RecyclerView mRcvHistory;
     private HistoryAdapter mHistoryAdapter;
-    private RemoveHistoryFragment removeHistoryFragment;
+    private DlgRemoveHistoryFragment dlgRemoveHistoryFragment;
     private ArrayList<History> historyArrayList;
     private Button mBtnCreateNew;
 
@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
 
     @Override
     public void onRemove(History history) {
-        removeHistoryFragment = new RemoveHistoryFragment(history);
-        removeHistoryFragment.show(getSupportFragmentManager(),"dialog");
+        dlgRemoveHistoryFragment = new DlgRemoveHistoryFragment(history);
+        dlgRemoveHistoryFragment.show(getSupportFragmentManager(),"dialog");
     }
 
     @Override
@@ -113,11 +113,11 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
         if(isRemove){
             historyArrayList.remove(history);
             mHistoryAdapter.notifyDataSetChanged();
-            removeHistoryFragment.dismiss();
+            dlgRemoveHistoryFragment.dismiss();
             Toast.makeText(MainActivity.this,"Remove success",Toast.LENGTH_SHORT).show();
         }
         else{
-            removeHistoryFragment.dismiss();
+            dlgRemoveHistoryFragment.dismiss();
         }
     }
 
