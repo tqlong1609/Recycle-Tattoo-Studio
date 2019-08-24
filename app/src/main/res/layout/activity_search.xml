@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_small"
-            android:text="@string/txt_user" />
+            android:text="@string/txt_phone_email" />
 
 
         <EditText
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_small"
-            android:text="@string/txt_password" />
+            android:text="@string/txt_name_client_id" />
 
         <EditText
             android:id="@+id/edt_phone"
@@ -74,5 +74,5 @@
         android:layout_marginBottom="@dimen/padding_medium"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-     />
+        />
 </RelativeLayout>
