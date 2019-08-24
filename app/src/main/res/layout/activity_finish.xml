@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".ui.activity.FinishActivity">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_rating"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/rating_5_stars"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="232dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
