@@ -30,6 +30,7 @@
     <dimen name="padding_big">32dp</dimen>
 
     <!-- Text size -->
+    <dimen name="text_size_small">13dip</dimen>
     <dimen name="text_size_hint">12dip</dimen>
     <dimen name="text_size_overall">16dip</dimen>
     <dimen name="text_size_header">19dip</dimen>
@@ -57,14 +58,16 @@
     <dimen name="btn_margin_left">30dp</dimen>
     <dimen name="btn_width_activity_main">350dp</dimen>
     <dimen name="btn_margin_activity_main">10dp</dimen>
+    <dimen name="btn_add_circle">60dp</dimen>
+    <dimen name="radius_btn_add">30dp</dimen>
     <dimen name="btn_padding_left_activity_main">20dp</dimen>
 
     <!--View history-->
-    <dimen name="layout_height">280dp</dimen>
+    <dimen name="layout_height">180dp</dimen>
     <dimen name="img_margin_top">12dp</dimen>
     <dimen name="img_margin_start">12dp</dimen>
     <dimen name="txt_margin_top">5dp</dimen>
-    <dimen name="linear_layout_width">125dp</dimen>
+    <dimen name="linear_layout_width">110dp</dimen>
     <dimen name="linear_layout_height">30dp</dimen>
     <dimen name="img_edit_width">50dp</dimen>
     <dimen name="img_edit_height">50dp</dimen>
@@ -82,7 +85,7 @@
     <dimen name="btn_confirm_width">120dp</dimen>
     <dimen name="btn_confirm_height">40dp</dimen>
     <dimen name="stroke_add_width">1dp</dimen>
-    <dimen name="edit_ems">16</dimen>
+    <dimen name="edit_width">40dp</dimen>
 
     <!--Rating Activity-->
     <dimen name="edit_width_comment">370dp</dimen>

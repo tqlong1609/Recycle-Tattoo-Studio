@@ -74,8 +74,8 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void addListSex() {
-        mListSex.add("Men");
-        mListSex.add("Lady");
+        mListSex.add("Male");
+        mListSex.add("Female");
     }
 
     private void addListMonth() {
@@ -121,7 +121,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void setupViews() {
         mEditEmail      = findViewById(R.id.edit_email);
-        mIbConfirmAdd   = findViewById(R.id.ib_confirm_add);
         mSpnDate        = findViewById(R.id.spn_date);
         mSpnMonth       = findViewById(R.id.spn_month);
         mSpnSex         = findViewById(R.id.spn_sex);

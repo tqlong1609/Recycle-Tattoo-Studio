@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
         setupViews();
         loadValuesRecyclerView();
 
-        mBtnCreateNew.setOnClickListener((v) -> startActivity(new Intent(MainActivity.this,AddActivity.class)));
+        //mBtnCreateNew.setOnClickListener((v) -> startActivity(new Intent(MainActivity.this,AddActivity.class)));
     }
 
     private void loadValuesRecyclerView() {
@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
 
     private void setupViews() {
         mRcvHistory = findViewById(R.id.rcv_history);
-        mBtnCreateNew = findViewById(R.id.btn_create_new);
     }
 
     private ArrayList<History> addValuesIntoArrayList() {

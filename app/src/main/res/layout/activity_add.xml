@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
@@ -40,7 +41,7 @@
                 android:text="@string/txt_name"
                 app:layout_constraintBottom_toTopOf="@+id/edit_name"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.026"
+                app:layout_constraintHorizontal_bias="0.094"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
@@ -48,8 +49,11 @@
             <EditText
                 android:id="@+id/edit_name"
                 style="@style/EditAddTheme"
+                android:drawableEnd="@drawable/ic_dropdown"
+                android:text="Mai Trung Thuý"
+                android:ems="16"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edit_width"
                 android:layout_marginTop="56dp"
                 app:layout_constraintEnd_toEndOf="@+id/txt_name"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -66,15 +70,39 @@
                 app:layout_constraintStart_toStartOf="@+id/edit_name"
                 app:layout_constraintTop_toBottomOf="@+id/edit_name" />
 
+            <TextView
+                style="@style/TxtAddTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="132dp"
+                android:text="@string/txt_preferential"
+                app:layout_constraintStart_toEndOf="@+id/txt_price"
+                app:layout_constraintTop_toTopOf="@+id/txt_price" />
+
+
+
             <EditText
                 android:id="@+id/edit_price"
                 style="@style/EditAddTheme"
+                android:ems="9"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edit_width"
                 android:layout_marginTop="4dp"
                 android:inputType="number"
                 app:layout_constraintStart_toStartOf="@+id/txt_price"
                 app:layout_constraintTop_toBottomOf="@+id/txt_price" />
+
+            <EditText
+                style="@style/EditAddTheme"
+                android:text="30"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_width"
+                android:layout_marginStart="20dp"
+                android:ems="6"
+                android:drawableEnd="@drawable/ic_percentage"
+                android:inputType="number"
+                app:layout_constraintStart_toEndOf="@+id/edit_price"
+                app:layout_constraintTop_toTopOf="@+id/edit_price" />
 
             <TextView
                 android:id="@+id/txt_deposit"
@@ -86,11 +114,22 @@
                 app:layout_constraintStart_toStartOf="@+id/edit_price"
                 app:layout_constraintTop_toBottomOf="@+id/edit_price" />
 
+            <TextView
+                android:id="@+id/txt_"
+                style="@style/TxtAddTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="SỐ TIỀN PHẢI THANH TOÁN"
+                app:layout_constraintStart_toStartOf="@+id/edit_price"
+                app:layout_constraintTop_toBottomOf="@+id/edit_price" />
+
             <EditText
                 android:id="@+id/edit_deposit"
                 style="@style/EditAddTheme"
+                android:ems="16"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edit_width"
                 android:layout_marginTop="4dp"
                 android:inputType="number"
                 app:layout_constraintStart_toStartOf="@+id/txt_deposit"
@@ -109,8 +148,9 @@
             <EditText
                 android:id="@+id/edit_payment"
                 style="@style/EditAddTheme"
+                android:ems="16"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edit_width"
                 android:layout_marginTop="4dp"
                 android:inputType="number"
                 app:layout_constraintStart_toStartOf="@+id/txt_payment"
@@ -129,8 +169,9 @@
             <EditText
                 android:id="@+id/edit_balance"
                 style="@style/EditAddTheme"
+                android:ems="16"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edit_width"
                 android:layout_marginTop="4dp"
                 android:inputType="number"
                 app:layout_constraintStart_toStartOf="@+id/txt_balance"
@@ -152,6 +193,7 @@
                 android:minLines="3"
                 android:gravity="top"
                 style="@style/EditAddTheme"
+                android:ems="16"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:layout_marginTop="4dp"

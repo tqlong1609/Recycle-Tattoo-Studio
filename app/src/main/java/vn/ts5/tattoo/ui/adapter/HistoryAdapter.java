@@ -37,7 +37,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtDate;
+        private TextView txtTime;
         private TextView txtName;
         private TextView txtPrice;
         private TextView txtDeposit;
@@ -54,7 +54,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
             super(itemView);
             listImgStar = new ArrayList<>();
 
-            txtDate     = itemView.findViewById(R.id.txt_date);
+            txtTime     = itemView.findViewById(R.id.txt_time);
             txtName     = itemView.findViewById(R.id.txt_name);
             txtPrice    = itemView.findViewById(R.id.txt_price);
             txtDeposit  = itemView.findViewById(R.id.txt_deposit);
@@ -65,7 +65,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
             mappingListImageStar();
 
             btnEdit     = itemView.findViewById(R.id.ib_edit);
-            btnRemove   = itemView.findViewById(R.id.ib_remove);
         }
 
         private void mappingListImageStar() {

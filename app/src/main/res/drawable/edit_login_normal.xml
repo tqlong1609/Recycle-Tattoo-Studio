@@ -4,4 +4,7 @@
     <solid android:color="@color/colorWhite"/>
     <size android:height="@dimen/text_height" />
     <corners android:radius="@dimen/radius_edit_login"/>
+    <stroke android:color="@color/colorBlack"
+        android:width="@dimen/stroke_add_width"
+        />
 </shape>

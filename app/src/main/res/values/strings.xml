@@ -19,8 +19,9 @@
     <string name="btn_confirm">Xác nhận</string>
 
     <!--Add activity-->
-    <string name="txt_name">Tattoo ist</string>
-    <string name="txt_price">Đơn giá</string>
+    <string name="txt_name">TATTOOIST</string>
+    <string name="txt_price">ĐƠN GIÁ</string>
+    <string name="txt_preferential">ƯU ĐÃI</string>
     <string name="txt_deposit">Đã cọc</string>
     <string name="txt_payment">Đã thanh toán</string>
     <string name="txt_balance">Còn lại</string>
@@ -45,11 +46,11 @@
     <string name="txt_success">thành công</string>
 
     <!--Register activity-->
-    <string name="txt_title_register">INFORMATION CUSTOMER</string>
-    <string name="txt_name_register">Name</string>
-    <string name="txt_birthday">Birthday</string>
-    <string name="txt_sex">Sex</string>
-    <string name="txt_phone">Phone</string>
-    <string name="txt_email">Email</string>
+    <string name="txt_title_register">CUSTOMER INFORMATION</string>
+    <string name="txt_name_register">NAME</string>
+    <string name="txt_birthday">BIRTHDAY</string>
+    <string name="txt_gender">GENDER</string>
+    <string name="txt_phone">PHONE</string>
+    <string name="txt_email">EMAIL</string>
 
 </resources>
