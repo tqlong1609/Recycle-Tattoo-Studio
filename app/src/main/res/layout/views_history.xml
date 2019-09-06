@@ -31,6 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_date">
 
         <TextView
+            android:id="@+id/txt_name"
             android:textStyle="bold"
             android:textSize="@dimen/text_size_small"
             android:textColor="@color/colorBlack"
@@ -42,7 +43,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_price"
+        android:id="@+id/txt_name_price"
         android:textSize="@dimen/text_size_small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,67 +53,67 @@
         app:layout_constraintTop_toBottomOf="@+id/lnl" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/txt_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
         android:text="4.000.000 VND"
         android:textSize="@dimen/text_size_small"
-        app:layout_constraintStart_toStartOf="@+id/txt_price"
-        app:layout_constraintTop_toTopOf="@+id/txt_price" />
+        app:layout_constraintStart_toStartOf="@+id/txt_name_price"
+        app:layout_constraintTop_toTopOf="@+id/txt_name_price" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/txt_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
         android:layout_marginTop="8dp"
         android:text="4.000.000 VND"
         android:textSize="@dimen/text_size_small"
-        app:layout_constraintStart_toStartOf="@+id/txt_deposit"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintStart_toStartOf="@+id/txt_name_payment"
+        app:layout_constraintTop_toBottomOf="@+id/txt_price" />
 
 
     <TextView
-        android:id="@+id/txt_deposit"
+        android:id="@+id/txt_name_payment"
         android:textSize="@dimen/text_size_small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Số tiền phải thanh toán:"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/txt_price"
-        app:layout_constraintTop_toBottomOf="@+id/txt_price" />
+        app:layout_constraintStart_toStartOf="@+id/txt_name_price"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_price" />
 
     <TextView
-        android:id="@+id/txt_payment"
+        android:id="@+id/txt_name_deposit"
         android:textSize="@dimen/text_size_small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Đã cọc:"
-        app:layout_constraintStart_toStartOf="@+id/txt_deposit"
-        app:layout_constraintTop_toBottomOf="@+id/txt_deposit" />
+        app:layout_constraintStart_toStartOf="@+id/txt_name_payment"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_payment" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/txt_deposit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:text="4.000.000 VND"
         android:textSize="@dimen/text_size_small"
-        app:layout_constraintStart_toStartOf="@+id/txt_payment"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toStartOf="@+id/txt_name_deposit"
+        app:layout_constraintTop_toBottomOf="@+id/txt_payment" />
 
     <TextView
-        android:id="@+id/txt_balance"
+        android:id="@+id/txt_name_paid"
         android:textSize="@dimen/text_size_small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Đã thanh toán:"
-        app:layout_constraintStart_toStartOf="@+id/txt_payment"
-        app:layout_constraintTop_toBottomOf="@+id/txt_payment" />
+        app:layout_constraintStart_toStartOf="@+id/txt_name_deposit"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_deposit" />
 
     <TextView
         android:id="@+id/textView11"
@@ -121,10 +122,11 @@
         android:layout_marginStart="8dp"
         android:text="Còn lại:"
         android:textSize="@dimen/text_size_small"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toTopOf="@+id/textView10" />
+        app:layout_constraintStart_toEndOf="@+id/txt_paid"
+        app:layout_constraintTop_toTopOf="@+id/txt_paid" />
 
     <TextView
+        android:id="@+id/txt_rest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -134,15 +136,15 @@
         app:layout_constraintTop_toTopOf="@+id/textView11" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/txt_paid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
         android:layout_marginTop="12dp"
         android:text="4.000.000 VND"
         android:textSize="@dimen/text_size_small"
-        app:layout_constraintStart_toStartOf="@+id/txt_balance"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintStart_toStartOf="@+id/txt_name_paid"
+        app:layout_constraintTop_toBottomOf="@+id/txt_deposit" />
 
     <TextView
         android:id="@+id/txt_status"
@@ -210,7 +212,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/ib_edit"
+        android:id="@+id/ibt_edit"
         android:layout_width="31dp"
         android:layout_height="28dp"
         android:background="@drawable/ic_edit"

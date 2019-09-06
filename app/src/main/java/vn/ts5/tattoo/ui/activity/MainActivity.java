@@ -1,6 +1,5 @@
 package vn.ts5.tattoo.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -9,33 +8,44 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.OnClick;
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.data.model.History;
 import vn.ts5.tattoo.ui.adapter.HistoryAdapter;
 import vn.ts5.tattoo.ui.dialog.DlgRemoveHistoryFragment;
 
-public class MainActivity extends AppCompatActivity implements HistoryAdapter.OnCallBack, DlgRemoveHistoryFragment.OnCallBackDialog {
+// mapping
+public class MainActivity extends BaseActivity implements HistoryAdapter.OnCallBack, DlgRemoveHistoryFragment.OnCallBackDialog {
 
     public static final int NOT_COMPLETE = 0;
     public static final int COMPLETE = 1;
 
+    @BindView(R.id.rcv_history)
     private RecyclerView mRcvHistory;
+
+    @OnClick(R.id.ibt_add)
+    public void onClickIbtAdd(View view){
+        // todo: click image button add
+    }
+
     private HistoryAdapter mHistoryAdapter;
     private DlgRemoveHistoryFragment dlgRemoveHistoryFragment;
     private ArrayList<History> historyArrayList;
-    private Button mBtnCreateNew;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setupViews();
+
+        initView();
         loadValuesRecyclerView();
 
         //mBtnCreateNew.setOnClickListener((v) -> startActivity(new Intent(MainActivity.this,AddActivity.class)));
@@ -57,9 +67,6 @@ public class MainActivity extends AppCompatActivity implements HistoryAdapter.On
         mRcvHistory.setAdapter(mHistoryAdapter);
     }
 
-    private void setupViews() {
-        mRcvHistory = findViewById(R.id.rcv_history);
-    }
 
     private ArrayList<History> addValuesIntoArrayList() {
         ArrayList<History> historyArrayList = new ArrayList<>();

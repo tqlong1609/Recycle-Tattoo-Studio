@@ -61,7 +61,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txt_price"
+                android:id="@+id/txt_name_price"
                 style="@style/TxtAddTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,8 +76,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="132dp"
                 android:text="@string/txt_preferential"
-                app:layout_constraintStart_toEndOf="@+id/txt_price"
-                app:layout_constraintTop_toTopOf="@+id/txt_price" />
+                app:layout_constraintStart_toEndOf="@+id/txt_name_price"
+                app:layout_constraintTop_toTopOf="@+id/txt_name_price" />
 
 
 
@@ -89,8 +89,8 @@
                 android:layout_height="@dimen/edit_width"
                 android:layout_marginTop="4dp"
                 android:inputType="number"
-                app:layout_constraintStart_toStartOf="@+id/txt_price"
-                app:layout_constraintTop_toBottomOf="@+id/txt_price" />
+                app:layout_constraintStart_toStartOf="@+id/txt_name_price"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name_price" />
 
             <EditText
                 style="@style/EditAddTheme"
@@ -105,7 +105,7 @@
                 app:layout_constraintTop_toTopOf="@+id/edit_price" />
 
             <TextView
-                android:id="@+id/txt_deposit"
+                android:id="@+id/txt_name_payment"
                 style="@style/TxtAddTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -132,11 +132,11 @@
                 android:layout_height="@dimen/edit_width"
                 android:layout_marginTop="4dp"
                 android:inputType="number"
-                app:layout_constraintStart_toStartOf="@+id/txt_deposit"
-                app:layout_constraintTop_toBottomOf="@+id/txt_deposit" />
+                app:layout_constraintStart_toStartOf="@+id/txt_name_payment"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name_payment" />
 
             <TextView
-                android:id="@+id/txt_payment"
+                android:id="@+id/txt_name_deposit"
                 style="@style/TxtAddTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -153,11 +153,11 @@
                 android:layout_height="@dimen/edit_width"
                 android:layout_marginTop="4dp"
                 android:inputType="number"
-                app:layout_constraintStart_toStartOf="@+id/txt_payment"
-                app:layout_constraintTop_toBottomOf="@+id/txt_payment" />
+                app:layout_constraintStart_toStartOf="@+id/txt_name_deposit"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name_deposit" />
 
             <TextView
-                android:id="@+id/txt_balance"
+                android:id="@+id/txt_name_paid"
                 style="@style/TxtAddTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -174,8 +174,8 @@
                 android:layout_height="@dimen/edit_width"
                 android:layout_marginTop="4dp"
                 android:inputType="number"
-                app:layout_constraintStart_toStartOf="@+id/txt_balance"
-                app:layout_constraintTop_toBottomOf="@+id/txt_balance" />
+                app:layout_constraintStart_toStartOf="@+id/txt_name_paid"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name_paid" />
 
             <TextView
                 android:id="@+id/txt_note"

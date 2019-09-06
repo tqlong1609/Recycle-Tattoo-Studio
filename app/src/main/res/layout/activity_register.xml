@@ -5,6 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <ImageView
+        android:id="@+id/img_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
@@ -56,7 +57,7 @@
              />
 
         <EditText
-            android:id="@+id/edit_name"
+            android:id="@+id/edt_name"
             style="@style/EditInformation"
             android:layout_margin="@dimen/padding_small"
             android:layout_width="match_parent"
@@ -134,7 +135,7 @@
              />
 
         <EditText
-            android:id="@+id/edit_phone"
+            android:id="@+id/edt_phone"
             style="@style/EditInformation"
             android:inputType="number"
             android:layout_width="match_parent"
@@ -161,8 +162,9 @@
              />
 
         <Button
-            android:id="@+id/ib_confirm_add"
+            android:id="@+id/btn_next"
             android:scaleType="centerInside"
+            android:text="Next"
             android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height_add"

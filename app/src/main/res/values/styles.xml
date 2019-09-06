@@ -41,7 +41,6 @@
     <style name="BtnLoginTheme">
         <item name="android:layout_margin">@dimen/padding_small</item>
         <item name="android:background">@drawable/btn_login_selector</item>
-        <item name="android:text">@string/sign_in_text</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:fontFamily">monospace</item>

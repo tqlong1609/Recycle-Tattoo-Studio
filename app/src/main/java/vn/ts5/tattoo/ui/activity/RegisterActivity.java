@@ -1,33 +1,48 @@
 package vn.ts5.tattoo.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.OnClick;
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.ui.adapter.SpinnerCumtomAdapter;
 import vn.ts5.tattoo.utils.ValidateUtil;
 
-public class RegisterActivity extends AppCompatActivity {
+// mapping
+public class RegisterActivity extends BaseActivity {
 
+    @BindView(R.id.edt_name)
     private EditText mEditEmail;
-    private ImageButton mIbConfirmAdd;
 
+    @BindView(R.id.spn_date)
     private Spinner mSpnDate;
+
+    @BindView(R.id.spn_month)
     private Spinner mSpnMonth;
+
+    @BindView(R.id.spn_sex)
     private Spinner mSpnSex;
+
+    @BindView(R.id.edt_phone)
+    private EditText edtPhone;
+
+    @BindView(R.id.edt_email)
+    private EditText edtEmail;
+
+    @OnClick(R.id.btn_next)
+    public void onClickNext(View view){
+        // todo: click next button
+    }
 
     private ArrayList<String> mListDate;
     private ArrayList<String> mListMonth;
@@ -39,7 +54,9 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        setupViews();
+
+        initView();
+        setupArrayList();
 
         addListDate();
         addListMonth();
@@ -54,7 +71,6 @@ public class RegisterActivity extends AppCompatActivity {
         setupSpinnerAdapter(mListSex);
         mSpnSex.setAdapter(spinnerCumtomAdapter);
 
-        mIbConfirmAdd.setOnClickListener((v) -> clickButtonConfirmAdd());
     }
 
     private void clickButtonConfirmAdd() {
@@ -119,12 +135,7 @@ public class RegisterActivity extends AppCompatActivity {
         };
     }
 
-    private void setupViews() {
-        mEditEmail      = findViewById(R.id.edit_email);
-        mSpnDate        = findViewById(R.id.spn_date);
-        mSpnMonth       = findViewById(R.id.spn_month);
-        mSpnSex         = findViewById(R.id.spn_sex);
-
+    private void setupArrayList() {
         mListDate   = new ArrayList<>();
         mListMonth  = new ArrayList<>();
         mListSex    = new ArrayList<>();

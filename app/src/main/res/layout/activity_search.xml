@@ -6,7 +6,7 @@
     tools:context=".ui.activity.LoginActivity">
 
     <ImageView
-        android:id="@+id/iv_background"
+        android:id="@+id/img_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
@@ -58,8 +58,9 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/btn_sign_in"
+            android:id="@+id/btn_search"
             style="@style/BtnLoginTheme"
+            android:text="Search"
             android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_margin="@dimen/padding_small"
@@ -67,12 +68,4 @@
             android:layout_marginTop="@dimen/padding_medium" />
     </LinearLayout>
 
-    <TextView
-        style="@style/TextVersionTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/padding_medium"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        />
 </RelativeLayout>

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import vn.ts5.tattoo.R;
 import vn.ts5.tattoo.data.model.History;
 import vn.ts5.tattoo.ui.activity.RatingActivity;
@@ -37,34 +38,43 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtTime;
+        @BindView(R.id.txt_date)
+        private TextView txtDate;
+
+        @BindView(R.id.txt_name)
         private TextView txtName;
+
+        @BindView(R.id.txt_price)
         private TextView txtPrice;
+
+        @BindView(R.id.txt_deposit)
         private TextView txtDeposit;
+
+        @BindView(R.id.txt_payment)
         private TextView txtPayment;
-        private TextView txtBalance;
+
+        @BindView(R.id.txt_paid)
+        private TextView txtPaid;
+
+        @BindView(R.id.txt_rest)
+        private TextView txtRest;
+
+        @BindView(R.id.txt_status)
         private TextView txtStatus;
 
         List<ImageView> listImgStar;
 
-        ImageButton btnEdit;
+        @BindView(R.id.ibt_edit)
+        private ImageButton btnEdit;
+
         ImageButton btnRemove;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             listImgStar = new ArrayList<>();
 
-            txtTime     = itemView.findViewById(R.id.txt_time);
-            txtName     = itemView.findViewById(R.id.txt_name);
-            txtPrice    = itemView.findViewById(R.id.txt_price);
-            txtDeposit  = itemView.findViewById(R.id.txt_deposit);
-            txtPayment  = itemView.findViewById(R.id.txt_payment);
-            txtBalance  = itemView.findViewById(R.id.txt_balance);
-            txtStatus   = itemView.findViewById(R.id.txt_status);
-
             mappingListImageStar();
 
-            btnEdit     = itemView.findViewById(R.id.ib_edit);
         }
 
         private void mappingListImageStar() {
